@@ -148,7 +148,7 @@
 
       .hero {
         display: grid;
-        gap: 2rem;
+        gap: 0rem;
         grid-template-columns: 1.2fr 0.8fr;
         align-items: center;
         padding-top: 3rem;
@@ -159,15 +159,31 @@
         align-items: center;
         gap: 0.8rem;
         margin-bottom: 1rem;
-        padding: 0.7rem 0.95rem;
+        padding: 0.9rem 1rem;
         border-radius: 999px;
         border: 1px solid var(--border);
         background: rgba(255, 255, 255, 0.03);
       }
 
       .hero-brand img {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
+      }
+
+      .knights-are-working {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+        padding: 0.7rem 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .knights-are-working img {
+        width: 120px;
+        height: 120px;
       }
 
       .hero-brand .brand-name {
@@ -198,13 +214,13 @@
       h1,
       h2,
       h3 {
-        line-height: 1.2;
-        margin: 0 0 1rem;
+        line-height: 1.1;
+        margin: 0 0 0rem;
       }
 
       h1 {
         font-size: clamp(2.2rem, 4vw, 3.6rem);
-        max-width: 12ch;
+        max-width: 14ch;
       }
 
       h2 {
@@ -269,6 +285,7 @@
         border: 1px solid var(--border);
         border-radius: 1.25rem;
         padding: 1.5rem;
+        margin-top: 30px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
       }
 
@@ -775,8 +792,6 @@
   </head>
   <body>
     <div class="bg-glow glow-a"></div>
-    <div class="bg-glow glow-b"></div>
-
     <div class="container">
       <main>
         <section class="hero">
@@ -788,176 +803,83 @@
                 <p class="brand-tag">Random Knights, Fighting for your rights!</p>
               </div>
             </div>
-            <h1>One app for anonymous online identity and payments.</h1>
+            <h1>Your Privacy focused online identity and payment.</h1>
             <p>
-              Encrypto Knights gives users a secure, private way to move through the web while helping developers build on a platform that handles identity and payments so they can focus on solving problems.
+              Passwords? 20 different monthly subs? Naah, we are here to fix this mess.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="/download">Download App</a>
-              <a class="btn btn-secondary" href="/became-a-knight">Become a Knight</a>
+              <a class="btn btn-primary" href="/download">Setup Guide</a>
+              <a class="btn btn-secondary" href="/toolbox">Toolbox</a>
             </div>
-            <ul class="hero-points">
-              <li>Pay as you go</li>
-              <li>End-to-end encryption</li>
-              <li>Free and open source</li>
-            </ul>
           </div>
 
           <div class="hero-card">
-            <h2>For users and builders</h2>
+            <h2>For Startups</h2>
             <p>
-              Normal users get privacy, anonymous identity, and simple payments. Developers get login, payments, and infrastructure so they can ship faster and earn from their work.
+              You get unified login & payment system, so you can focus on problem solving and earn stablecoin without any pain and web3 knowledge.
             </p>
             <ul>
-              <li>Protect your digital life with a single identity layer.</li>
-              <li>Build products without worrying about onboarding and payments.</li>
-              <li>Join a community of creators making tools that matter.</li>
+              <li>Just `docker pull` and `npm install`</li>
+              <li>Earn from day one</li>
+              <li>We call you a knight!</li>
             </ul>
+            <a class="btn btn-secondary" style="margin-top: 20px;" href="/became-a-knight">Become a Knight</a>
           </div>
         </section>
 
-        <section id="social">
-          <div class="section-title">
-            <h2>Follow the project</h2>
+        <section id="vision">
+          <div class="vision-grid">
+            <article class="panel">
+              <h3>Zero trust</h3>
+              <p>Don't trust people when you can trust math and code.</p>
+            </article>
+            <article class="panel">
+              <h3>Decentralization</h3>
+              <p>We are on blockchain we can't still your money.</p>
+            </article>
+            <article class="panel">
+              <h3>Centralization</h3>
+              <p>Charge once, use anywhere.</p>
+            </article>
+            <article class="panel">
+              <h3>Pay as you go</h3>
+              <p>Pay for what you actually use.</p>
+            </article>
           </div>
+        </section>
+
+
+        <section id="social">
+            <div class="knights-are-working">
+              <img src="assets/img/knights-are-working.webp" alt="Encrypto Knights logo" />
+              <div>
+                <p class="brand-name">Knights still working on it, Follow us :)</p>
+              </div>
+            </div>
           <div class="social-grid">
             <a class="panel" href="https://github.com/encryptoKnights/" target="_blank" rel="noreferrer">
               <img src="assets/img/github.svg" alt="GitHub" class="social-icon" />
               <h3>GitHub</h3>
               <p>Explore the code and contribute.</p>
             </a>
-            <a class="panel" href="https://t.me/encryptoknights" target="_blank" rel="noreferrer">
+            <a class="panel" href="https://t.me/encryptoknights_dev" target="_blank" rel="noreferrer">
               <img src="assets/img/telegram.svg" alt="Telegram" class="social-icon" />
               <h3>Telegram</h3>
-              <p>Join the community and talk with builders.</p>
+              <p>Join the knights community </p>
             </a>
             <a class="panel" href="https://x.com/EncryptoKnights" target="_blank" rel="noreferrer">
               <img src="assets/img/x.svg" alt="X" class="social-icon" />
               <h3>Twitter / X</h3>
-              <p>Get updates and product announcements.</p>
+              <p>News about us.</p>
             </a>
           </div>
         </section>
 
-        <section id="install">
-          <div class="section-title">
-            <h2>Install on your device</h2>
-          </div>
-          <div class="platform-grid">
-            <article class="panel platform-card">
-              <div class="platform-icon">🪟</div>
-              <h3>Windows</h3>
-            </article>
-            <article class="panel platform-card">
-              <div class="platform-icon">🐧</div>
-              <h3>Linux</h3>
-            </article>
-            <article class="panel platform-card">
-              <div class="platform-icon">🍎</div>
-              <h3>macOS</h3>
-            </article>
-            <article class="panel platform-card">
-              <div class="platform-icon">🤖</div>
-              <h3>Android</h3>
-            </article>
-            <article class="panel platform-card">
-              <div class="platform-icon">🍏</div>
-              <h3>iOS</h3>
-            </article>
-            <article class="panel platform-card">
-              <div class="platform-icon">🌐</div>
-              <h3>Chrome</h3>
-            </article>
-            <article class="panel platform-card">
-              <div class="platform-icon">🦊</div>
-              <h3>Firefox</h3>
-            </article>
-          </div>
-        </section>
 
-        <section id="vision">
-          <div class="section-title">
-            <h2>Building the next layer of digital trust</h2>
-          </div>
-          <div class="vision-grid">
-            <article class="panel">
-              <h3>Zero trust systems</h3>
-              <p>Security by design, not as an afterthought.</p>
-            </article>
-            <article class="panel">
-              <h3>Decentralization</h3>
-              <p>Own your data and avoid single points of failure.</p>
-            </article>
-            <article class="panel">
-              <h3>Pay as you go</h3>
-              <p>Simple, flexible access that scales with usage.</p>
-            </article>
-            <article class="panel">
-              <h3>End-to-end encryption</h3>
-              <p>Keep private communication safe from start to finish.</p>
-            </article>
-            <article class="panel">
-              <h3>FOSS</h3>
-              <p>Free and open source software for transparency and trust.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="roadmap">
-          <div class="section-title">
-            <h2>What is coming next</h2>
-          </div>
-          <div class="roadmap-grid">
-            <article class="panel">
-              <h3>Testnet launch</h3>
-              <span>TBA</span>
-            </article>
-            <article class="panel">
-              <h3>Mainnet launch</h3>
-              <span>TBA</span>
-            </article>
-            <article class="panel">
-              <h3>Tools and SDKs</h3>
-              <span>TBA</span>
-            </article>
-            <article class="panel">
-              <h3>General purpose cloud computing</h3>
-              <span>TBA</span>
-            </article>
-            <article class="panel">
-              <h3>Bootcamps and treasury</h3>
-              <span>TBA</span>
-            </article>
-            <article class="panel">
-              <h3>Marketplace and IDE</h3>
-              <span>TBA</span>
-            </article>
-          </div>
-        </section>
-
-        <section id="faq">
-          <div class="section-title">
-            <h2>Questions you might have</h2>
-          </div>
-          <div class="faq-list">
-            <article class="faq-item">
-              <h3>What is Encrypto Knights?</h3>
-              <p>A privacy-first platform for identity, payments, and developer tools.</p>
-            </article>
-            <article class="faq-item">
-              <h3>Who is it for?</h3>
-              <p>Everyday users who want privacy and developers who want to launch without friction.</p>
-            </article>
-            <article class="faq-item">
-              <h3>Is it open source?</h3>
-              <p>Yes. Encrypto Knights is built with openness, transparency, and community collaboration in mind.</p>
-            </article>
-          </div>
-        </section>
       </main>
 
       <footer>
-        <p>Encrypto Knights — by developers, for developers.</p>
+        <p>by developers, for developers.</p>
       </footer>
     </div>
   </body>

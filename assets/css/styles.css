@@ -255,19 +255,68 @@ h2 {
   box-shadow: 0 20px 60px rgba(98, 213, 32, 0.25);
 }
 
-.social-grid,
-.vision-grid {
+.social-grid {
   display: grid;
   gap: 1rem;
-}
-
-.social-grid {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
-.vision-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+#vision {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
+
+.vision-card {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.vision-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-light);
+  box-shadow: 0 20px 60px rgba(98, 213, 32, 0.25);
+}
+
+.vision-card-image {
+  flex: 0 0 800px;
+}
+
+.vision-card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.vision-card-content {
+  flex: 1;
+}
+
+.vision-card-content h3 {
+  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.vision-card-content p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.vision-card:nth-child(1) { animation-delay: 0.1s; }
+.vision-card:nth-child(2) { animation-delay: 0.2s; }
+.vision-card:nth-child(3) { animation-delay: 0.3s; }
+.vision-card:nth-child(4) { animation-delay: 0.4s; }
+.vision-card:nth-child(5) { animation-delay: 0.5s; }
 
 .social-icon {
   width: 2.5rem;
@@ -287,11 +336,6 @@ h2 {
 .social-grid .panel:nth-child(1) { animation-delay: 0.1s; }
 .social-grid .panel:nth-child(2) { animation-delay: 0.2s; }
 .social-grid .panel:nth-child(3) { animation-delay: 0.3s; }
-
-.vision-grid .panel:nth-child(1) { animation-delay: 0.2s; }
-.vision-grid .panel:nth-child(2) { animation-delay: 0.3s; }
-.vision-grid .panel:nth-child(3) { animation-delay: 0.4s; }
-.vision-grid .panel:nth-child(4) { animation-delay: 0.5s; }
 
 footer {
   padding: 2rem 0 3rem;
@@ -329,7 +373,15 @@ footer:hover {
     grid-template-columns: 1fr;
   }
 
+  .vision-card,
+  .vision-card:nth-child(even) {
+    flex-direction: column;
+  }
 
+  .vision-card-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
 }
 
 @keyframes fadeInUp {
